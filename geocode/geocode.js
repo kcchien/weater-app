@@ -4,8 +4,6 @@
 
 const request = require('request');
 
-
-
 var geocodeAddress = (address, callback) => {
 
     // Encode string from user input
@@ -13,7 +11,7 @@ var geocodeAddress = (address, callback) => {
 
     // Get geocode through GOOGLE MAPS Geocode API
     request({
-        url: `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}&lang=zh-TW`,
+        url: `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}&region=tw&key=AIzaSyAo1sM7AZJg_iq3Pl7475sRhgBXLA7E7fA`,
         json: true
     }, (error, response, body) => {
         //console.log(JSON.stringify(response, undefined, 2));
